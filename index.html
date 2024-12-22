@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VartanArmenianSinger</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/colors.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/glidCarousel.css" />
+    <link rel="stylesheet" href="./assets/css/carousel.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/youtube.css" />
+
+    <script src="./assets/js/glideCarousel.js"></script>
+  </head>
+  <body>
+    <main>
+      <!-- 01 Nav Bar -->
+      <nav class="sidebar">
+        <div class="hamburger" aria-label="Open sidebar">☰</div>
+        <a href="#">Home</a>
+        <a href="#videoSection">YouTube</a>
+        <a href="#audio">Music</a>
+        <a href="#contactSection">Contact</a>
+      </nav>
+
+      <!---- 02 carousel ---->
+      <div class="glide carouselContainer">
+        <div data-glide-el="track" class="glide__track carouselSection">
+          <ul class="glide__slides carouselUl">
+            <li class="glide__slide carouselLi">
+              <img
+                class="carouselImg"
+                src="./assets/images/01aWild.jpg"
+                alt="carouselArtistImage"
+              />
+            </li>
+            <li class="glide__slide carouselLi">
+              <img
+                class="carouselImg"
+                src="./assets/images/03aWild.jpg"
+                alt="carouselArtistImage"
+              />
+            </li>
+            <li class="glide__slide carouselLi">
+              <img
+                class="carouselImg"
+                src="./assets/images/02aWild.jpg"
+                alt="carouselArtistImage"
+              />
+            </li>
+            <li class="glide__slide carouselLi">
+              <img
+                class="carouselImg"
+                src="./assets/images/04aWild.jpg"
+                alt="carouselArtistImage"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 03 youtube -->
+
+      <section class="youtube-section" id="videoSection">
+        <div class="youtube-container">
+          <div class="youtube-video">
+            <iframe
+              src="https://www.youtube.com/embed/rtWElBZu_5k?si=-kINkzC1NZCUQ7Rp"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="youtube-video">
+            <iframe
+              src="https://www.youtube.com/embed/R91fMAh76do?si=THoKUb4GWlfdBGcw"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="youtube-video">
+            <iframe
+              src="https://www.youtube.com/embed/1eAX9bZCVsU?si=wLKSxIEmBlPkw28E"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="youtube-video">
+            <iframe
+              src="https://www.youtube.com/embed/d7Dv8dh2Ah0?si=Yu7F4ujSQWQ7apja"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="youtube-video">
+            <iframe
+              src="https://www.youtube.com/embed/xN6JTKGaAdg?si=yXCairHZOxxwZ7rv"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js" type="module"></script>
+    <script type="module" src="./assets/js/navbar.js"></script>
+    <script>
+      // Initialize Glide.js for the carousel
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 1,
+        perView: 1,
+        focusAt: 0,
+        gap: 0,
+        autoplay: 4000,
+        hoverpause: false,
+        keyboard: true,
+        // bound: false, Works only with slider type and a non-centered focusAt setting.
+        swipeThreshold: 80,
+        dragThreshold: 120,
+        perTouch: 3,
+        touchRatio: 0.5,
+        touchAngle: 45,
+        animationDuration: 100,
+        rewind: true,
+        rewindDuration: 800,
+        animationTimingFunc: "bounce",
+        direction: "ltr",
+        peek: { before: 0, after: 0 },
+        // breakpoints: {
+        //   1140: { perView: 2 },
+        //   768: { perView: 1 },
+        //   480: { perView: 1 },
+        // },
+        // classes: {
+        //   direction: {
+        //     ltr: "glide--ltr",
+        //     rtl: "glide--rtl",
+        //   },
+        //   slider: "glide--slider",
+        //   carousel: "glide--carousel",
+        //   swipeable: "glide--swipeable",
+        //   dragging: "glide--dragging",
+        //   cloneSlide: "glide__slide--clone",
+        //   activeNav: "glide__bullet--active",
+        //   activeSlide: "glide__slide--active",
+        //   disabledArrow: "glide__arrow--disabled",
+        // },
+        throttle: 10,
+      }).mount();
+    </script>
+  </body>
+</html>

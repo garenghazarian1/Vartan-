@@ -1,0 +1,25 @@
+.youtube-section {
+  padding: 2rem;
+  background-color: var(--youtube-bg-color);
+}
+
+.youtube-container {
+  display: grid;
+  gap: var(--youtube-spacing);
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  justify-content: center;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--youtube-border-radius);
+  box-shadow: var(--youtube-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube-video iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

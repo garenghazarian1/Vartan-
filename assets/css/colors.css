@@ -1,0 +1,37 @@
+:root {
+  /* default colors  */
+  --main-background-color: black;
+  --main-text-color: white;
+
+  /* fonts */
+  --artist-main-font: "Megrim";
+  /* carousel */
+  --carousel-border-color-white: white;
+  --carousel-border-color-black: black;
+  --carousel-border-shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Navbar color variables */
+  --navbar-background-color: #2c3e50;
+  --navbar-text-color: #ecf0f1;
+  --navbar-link-hover-color: #0a5481;
+  --navbar-hover-bg-color: #3498db33;
+  --navbar-shadow-color: #00000033;
+  --navbar-transition-speed: 0.3s;
+
+  /* Sidebar specific */
+  --sidebar-width: 50vw;
+  --sidebar-mobile-width: 50vw;
+  --sidebar-background-color: rgba(0, 0, 0, 0.379);
+  --sidebar-backdrop-filter: blur(10px);
+  --sidebar-text-color: #ecf0f1;
+  --sidebar-link-bg: transparent;
+  --sidebar-link-hover-bg: rgba(255, 255, 255, 0.635);
+  --sidebar-border-color: rgba(255, 255, 255, 0.2);
+  --sidebar-box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+
+  /* youtube */
+  --youtube-bg-color: rgba(44, 62, 80, 0.9);
+  --youtube-border-radius: 0.5rem;
+  --youtube-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --youtube-spacing: 1.5rem;
+}
