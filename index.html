@@ -61,48 +61,61 @@
         </div>
       </div>
       <!-- 03 youtube -->
-
-      <section class="youtube-section" id="videoSection">
-        <div class="youtube-container">
-          <div class="youtube-video">
-            <iframe
-              src="https://www.youtube.com/embed/rtWElBZu_5k?si=-kINkzC1NZCUQ7Rp"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+      <section class="youtube-slider-section" id="videoSection">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <iframe
+                  src="https://www.youtube.com/embed/rtWElBZu_5k?si=-kINkzC1NZCUQ7Rp"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="glide__slide">
+                <iframe
+                  src="https://www.youtube.com/embed/R91fMAh76do?si=THoKUb4GWlfdBGcw"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="glide__slide">
+                <iframe
+                  src="https://www.youtube.com/embed/1eAX9bZCVsU?si=wLKSxIEmBlPkw28E"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <li>
+                    <iframe
+                  src="https://www.youtube.com/embed/d7Dv8dh2Ah0?si=Yu7F4ujSQWQ7apja"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                </li>
+                <li>
+                    <iframe
+                  src="https://www.youtube.com/embed/xN6JTKGaAdg?si=yXCairHZOxxwZ7rv"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                </li>
+          
+     
+              </li>
+            </ul>
           </div>
-          <div class="youtube-video">
-            <iframe
-              src="https://www.youtube.com/embed/R91fMAh76do?si=THoKUb4GWlfdBGcw"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="youtube-video">
-            <iframe
-              src="https://www.youtube.com/embed/1eAX9bZCVsU?si=wLKSxIEmBlPkw28E"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="youtube-video">
-            <iframe
-              src="https://www.youtube.com/embed/d7Dv8dh2Ah0?si=Yu7F4ujSQWQ7apja"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="youtube-video">
-            <iframe
-              src="https://www.youtube.com/embed/xN6JTKGaAdg?si=yXCairHZOxxwZ7rv"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              &#9664;
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              &#9654;
+            </button>
           </div>
         </div>
       </section>
@@ -152,6 +165,18 @@
         //   disabledArrow: "glide__arrow--disabled",
         // },
         throttle: 10,
+      }).mount();
+    </script>
+    <script>
+      new Glide(".youtube-slider-section .glide", {
+        type: "slider",
+        perView: 2, // Display 2 videos at a time
+        focusAt: 0, // Start at the first slide
+        gap: 20, // Space between slides
+        autoplay: false, // Disable autoplay for slider
+        breakpoints: {
+          768: { perView: 1 }, // Show 1 video for smaller screens
+        },
       }).mount();
     </script>
   </body>
