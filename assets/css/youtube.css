@@ -1,19 +1,20 @@
 .youtube-slider-section {
-  padding: 2rem;
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 2rem 0rem 2rem 0rem;
   background-color: var(--youtube-slider-bg);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .youtube-slider-section .glide {
   width: 90%;
-  max-width: 60rem; /* Limit max width */
+  max-width: 60rem;
 }
 
 .youtube-slider-section .glide__slides {
   display: flex;
-  gap: 1rem; /* Space between slides */
 }
 
 .youtube-slider-section .glide__slide {
@@ -45,7 +46,7 @@
   color: var(--youtube-slider-bg);
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--youtube-border-radius);
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -53,4 +54,30 @@
 
 .youtube-slider-section .glide__arrow:hover {
   background-color: var(--youtube-arrow-hover-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .youtube-slider-section iframe {
+    height: 15rem;
+  }
+  .youtube-slider-section .glide {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-slider-section iframe {
+    height: 12rem;
+  }
+  .youtube-slider-section .glide {
+    width: 100%;
+  }
+  .youtube-slider-section .glide__arrows {
+    margin-top: 0.5rem;
+  }
+  .youtube-slider-section .glide__arrow {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
 }

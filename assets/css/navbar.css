@@ -6,12 +6,11 @@
   left: calc(-1 * var(--sidebar-width));
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-text-color);
-  padding: 1rem;
   transition: left var(--navbar-transition-speed) ease-in-out;
   box-shadow: var(--sidebar-box-shadow);
   overflow-y: auto; /* For scrolling content if needed */
   border-right: 1px solid var(--sidebar-border-color);
-  z-index: 2000;
+  z-index: 3000;
 }
 
 .sidebar.open {
@@ -34,7 +33,7 @@
   pointer-events: none;
 }
 
-.sidebar a {
+.sidebarA {
   display: block;
   padding: 0.8rem 1rem;
   color: var(--sidebar-text-color);
@@ -43,14 +42,75 @@
   font-size: 1rem;
   border-radius: 4px;
   margin: 0.5rem 0;
-  transition: color var(--navbar-transition-speed),
-    background-color var(--navbar-transition-speed);
+  transition: color var(--navbar-transition-speed);
+  background-color: var(--navbar-transition-speed);
 }
 
-.sidebar a:hover {
+.sidebarA:hover {
   color: var(--navbar-link-hover-color);
   background-color: var(--sidebar-link-hover-bg);
 }
+
+/* social media and contact */
+
+.contact-section {
+  background-color: var(--contact-bg-color);
+}
+.contact-section-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: color var(--navbar-transition-speed);
+  padding: 0.8rem 1rem;
+}
+.contact-section-flex:hover {
+  color: var(--contact-link-hover-color);
+  background-color: var(--sidebar-link-hover-bg);
+}
+
+.contact-heading {
+  font-size: 1rem;
+  color: var(--sidebar-text-color);
+  background-color: var(--sidebar-link-bg);
+}
+
+.contact-link {
+  color: var(--sidebar-text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.contact-link:hover {
+  color: var(--contact-link-hover-color);
+}
+.contact-link-email {
+  color: var(--sidebar-text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.contact-link-email:hover {
+  color: var(--contact-link-hover-color);
+}
+
+.social-link {
+  color: var(--social-icon-color);
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--social-icon-hover-color);
+  transform: scale(1.2);
+}
+
+/* ----- */
 
 @media (max-width: 768px) {
   .sidebar {
@@ -61,5 +121,19 @@
     font-size: 1.5rem;
     top: 0.75rem;
     left: 0.75rem;
+  }
+  .contact-section-flex {
+    padding: 0.3 0.3;
+  }
+
+  .contact-heading {
+    font-size: 0.8rem;
+  }
+  .contact-link {
+    font-size: 0.8rem;
+  }
+  .contact-link-email {
+    font-size: 0.5rem;
+    margin-left: 0.2rem;
   }
 }
