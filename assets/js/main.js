@@ -1,5 +1,5 @@
-import { initializeSidebar } from "./navbar.js";
+// import { initializeSidebar } from "./navbar.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  initializeSidebar();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   initializeSidebar();
+// });

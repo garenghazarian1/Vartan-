@@ -12,12 +12,17 @@
     <link rel="stylesheet" href="./assets/css/navbar.css" />
     <link rel="stylesheet" href="./assets/css/youtube.css" />
     <link rel="stylesheet" href="./assets/css/fontAwsome.css" />
-     <link
+    <link rel="stylesheet" href="./assets/css/music.css" />
+
+      <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  /> 
-
+  />  
     <script src="./assets/js/glideCarousel.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
+     <!-- <script src="./assets/js/howler.js"></script> -->
+
+     
   </head>
   <body>
     <main>
@@ -175,9 +180,59 @@
           </div>
         </div>
       </section>
+      <!-- 04 music -->
+
+
+
+
+  <!-- Top Info -->
+  <div class="musicContainer" id="audio">
+  <!-- Top Info -->
+  <div id="title">
+    <span id="track"></span>
+    <div id="timer">0:00</div>
+    <div id="duration">0:00</div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controlsOuter">
+    <div class="controlsInner">
+      <div id="loading"></div>
+      <div class="btn" id="playBtn"></div>
+      <div class="btn" id="pauseBtn"></div>
+      <div class="btn" id="prevBtn"></div>
+      <div class="btn" id="nextBtn"></div>
+    </div>
+    <div class="btn" id="playlistBtn"></div>
+    <div class="btn" id="volumeBtn"></div>
+  </div>
+
+  <!-- Progress -->
+  <div id="waveform"></div>
+  <div id="bar"></div>
+  <div id="progress"></div>
+
+  <!-- Playlist -->
+  <div id="playlist">
+    <div id="list"></div>
+  </div>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+</div>
+      
+
+ 
+  
+  
     </main>
     <script src="./assets/js/main.js" type="module"></script>
     <script type="module" src="./assets/js/navbar.js"></script>
+    <!-- carousel Glide -->
     <script>
       // Initialize Glide.js for the carousel
       new Glide(".glide", {
@@ -223,6 +278,8 @@
         throttle: 10,
       }).mount();
     </script>
+    <!-- carousel Glide -->
+
     <script>
       new Glide(".youtube-slider-section .glide", {
         type: "slider",
@@ -235,5 +292,12 @@
         },
       }).mount();
     </script>
+
+    <!-- media player --> 
+    
+ 
+  <script src="./assets/js/howler.core.js"></script>
+  <script src="./assets/js/siriwave.js"></script>
+  <script src="./assets/js/player.js"></script>
   </body>
 </html>
