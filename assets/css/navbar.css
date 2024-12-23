@@ -1,6 +1,6 @@
 .sidebar {
   width: var(--sidebar-width);
-  height: 100vh;
+  height: 80vh;
   position: fixed;
   top: 0;
   left: calc(-1 * var(--sidebar-width));
@@ -101,6 +101,22 @@
 .contact-link-email:hover {
   color: var(--contact-link-hover-color);
 }
+
+/* contact icons */
+.contact-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #007bff;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: fill 0.3s ease;
+}
+
+.contact-icon:hover {
+  fill: #0056b3;
+}
+
+/* social media */
 
 .social-links {
   padding: 1rem;
