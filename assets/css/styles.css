@@ -12,7 +12,10 @@ body {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
 }
-/* body,
-h1 {
-  font-family: var(--artist-main-font), Arial, sans-serif;
-} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

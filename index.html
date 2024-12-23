@@ -19,8 +19,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   />  
     <script src="./assets/js/glideCarousel.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
-     <!-- <script src="./assets/js/howler.js"></script> -->
+    
 
      
   </head>
@@ -196,15 +195,89 @@
 
   <!-- Controls -->
   <div class="controlsOuter">
+    <button class="btn" id="playlistBtn" aria-label="Playlist">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path opacity="0.5" d="M15 6L3 6" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+        <path opacity="0.5" d="M13 10L3 10" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+        <path opacity="0.5" d="M9 14H3" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+        <path opacity="0.5" d="M8 18H3" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M17 16.5V12.5V8" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+        <circle cx="14.5" cy="16.5" r="2.5" stroke="var(--primary-color)" stroke-width="1.5" />
+        <path d="M21 12C18.7909 12 17 10.2091 17 8" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+    </button>
     <div class="controlsInner">
+     
       <div id="loading"></div>
-      <div class="btn" id="playBtn"></div>
-      <div class="btn" id="pauseBtn"></div>
-      <div class="btn" id="prevBtn"></div>
-      <div class="btn" id="nextBtn"></div>
+      
+      <button class="btn" id="prevBtn" aria-label="Previous">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12,1A11,11,0,1,0,23,12,11.013,11.013,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9.01,9.01,0,0,1,12,21Zm-2-9,6-4v8ZM7,8H9v8H7Z"
+            fill="var(--primary-color)"
+          />
+        </svg>
+      </button>
+      <button class="btn" id="playBtn" aria-label="Play">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+          <path d="M13.8876 9.9348C14.9625 10.8117 15.5 11.2501 15.5 12C15.5 12.7499 14.9625 13.1883 13.8876 14.0652C13.5909 14.3073 13.2966 14.5352 13.0261 14.7251C12.7888 14.8917 12.5201 15.064 12.2419 15.2332C11.1695 15.8853 10.6333 16.2114 10.1524 15.8504C9.6715 15.4894 9.62779 14.7336 9.54038 13.2222C9.51566 12.7947 9.5 12.3757 9.5 12C9.5 11.6243 9.51566 11.2053 9.54038 10.7778C9.62779 9.26636 9.6715 8.51061 10.1524 8.1496C10.6333 7.78859 11.1695 8.11466 12.2419 8.76679C12.5201 8.93597 12.7888 9.10831 13.0261 9.27492C13.2966 9.46483 13.5909 9.69274 13.8876 9.9348Z" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </button>
+      
+      <button class="btn" id="pauseBtn" aria-label="Pause">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+          <path
+            d="M8 9.5C8 9.03406 8 8.80109 8.07612 8.61732C8.17761 8.37229 8.37229 8.17761 8.61732 8.07612C8.80109 8 9.03406 8 9.5 8C9.96594 8 10.1989 8 10.3827 8.07612C10.6277 8.17761 10.8224 8.37229 10.9239 8.61732C11 8.80109 11 9.03406 11 9.5V14.5C11 14.9659 11 15.1989 10.9239 15.3827C10.8224 15.6277 10.6277 15.8224 10.3827 15.9239C10.1989 16 9.96594 16 9.5 16C9.03406 16 8.80109 16 8.61732 15.9239C8.37229 15.8224 8.17761 15.6277 8.07612 15.3827C8 15.1989 8 14.9659 8 14.5V9.5Z"
+            stroke="currentColor"
+            stroke-width="1.5" />
+          <path
+            d="M13 9.5C13 9.03406 13 8.80109 13.0761 8.61732C13.1776 8.37229 13.3723 8.17761 13.6173 8.07612C13.8011 8 14.0341 8 14.5 8C14.9659 8 15.1989 8 15.3827 8.07612C15.6277 8.17761 15.8224 8.37229 15.9239 8.61732C16 8.80109 16 9.03406 16 9.5V14.5C16 14.9659 16 15.1989 15.9239 15.3827C15.8224 15.6277 15.6277 15.8224 15.3827 15.9239C15.1989 16 14.9659 16 14.5 16C14.0341 16 13.8011 16 13.6173 15.9239C13.3723 15.8224 13.1776 15.6277 13.0761 15.3827C13 15.1989 13 14.9659 13 14.5V9.5Z"
+            stroke="currentColor"
+            stroke-width="1.5" />
+        </svg>
+      </button>
+      
+      
+      
+      <button class="btn" id="nextBtn" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12,23A11,11,0,1,0,1,12,11.013,11.013,0,0,0,12,23ZM12,3a9,9,0,1,1-9,9A9.01,9.01,0,0,1,12,3Zm2,9L8,16V8Zm3,4H15V8h2Z"
+            fill="var(--primary-color)"
+          />
+        </svg>
+      </button>
+      
+     
     </div>
-    <div class="btn" id="playlistBtn"></div>
-    <div class="btn" id="volumeBtn"></div>
+    
+    
+    
+    <button class="btn" id="volumeBtn" aria-label="Special Control">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M20 6C20 6 21.5 7.8 21.5 12C21.5 16.2 20 18 20 18"
+          stroke="var(--primary-color)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18 9C18 9 18.5 9.9 18.5 12C18.5 14.1 18 15 18 15"
+          stroke="var(--primary-color)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M1.95863 8.57679C2.24482 8.04563 2.79239 7.53042 3.33997 7.27707C3.9393 6.99979 4.62626 6.99979 6.00018 6.99979C6.51225 6.99979 6.76828 6.99979 7.01629 6.95791C7.26147 6.9165 7.50056 6.84478 7.72804 6.74438C7.95815 6.64283 8.1719 6.50189 8.59941 6.22002L8.81835 6.07566C11.3613 4.39898 12.6328 3.56063 13.7001 3.92487C13.9048 3.9947 14.1029 4.09551 14.2798 4.21984C15.2025 4.86829 15.2726 6.37699 15.4128 9.3944C15.4647 10.5117 15.5001 11.4679 15.5001 11.9998C15.5001 12.5317 15.4647 13.4879 15.4128 14.6052C15.2726 17.6226 15.2025 19.1313 14.2798 19.7797C14.1029 19.9041 13.9048 20.0049 13.7001 20.0747C12.6328 20.4389 11.3613 19.6006 8.81834 17.9239L8.59941 17.7796C8.1719 17.4977 7.95815 17.3567 7.72804 17.2552C7.50056 17.1548 7.26147 17.0831 7.01629 17.0417C6.76828 16.9998 6.51225 16.9998 6.00018 16.9998C4.62626 16.9998 3.9393 16.9998 3.33997 16.7225C2.79239 16.4692 2.24482 15.9539 1.95863 15.4228C1.6454 14.8414 1.60856 14.237 1.53488 13.0282C1.52396 12.849 1.51525 12.6722 1.50928 12.4998"
+          stroke="var(--primary-color)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+    
   </div>
 
   <!-- Progress -->
@@ -230,6 +303,7 @@
   
   
     </main>
+    <!-- navbar -->
     <script src="./assets/js/main.js" type="module"></script>
     <script type="module" src="./assets/js/navbar.js"></script>
     <!-- carousel Glide -->
