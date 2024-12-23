@@ -1,0 +1,194 @@
+/* Base Setup for Flex Container */
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  box-sizing: border-box;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/008.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Section-specific styling for contact and information areas */
+.contact-section,
+.contact-info {
+  flex-grow: 1;
+  background: var(--contact-background-semi-transparent);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  color: var(--contact-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Typography and Spacing */
+.headText,
+.contact-info h2,
+.contact-info a {
+  margin: 0.5rem;
+  color: var(--contact-text-color);
+  font-size: 1.5rem;
+}
+
+.formContainer {
+  margin-top: 0.5rem;
+}
+
+/* Form styling for minimalist appeal */
+.form-group {
+  margin: 1rem;
+}
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+}
+
+.form-group textarea {
+  height: 7.5rem;
+  resize: none;
+}
+
+/* Button and Link Styling */
+.submit-button-contact {
+  margin: 1rem;
+  padding: 0.75rem;
+  background-color: var(--contact-button-bg);
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button-contact:hover {
+  background-color: var(--contact-button-hover-bg);
+}
+
+.contact-info a {
+  color: var(--contact-button-bg);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .contact-section,
+  .contact-info {
+    width: 100%;
+  }
+}
+
+/* socialMedia */
+
+/* .social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: var(--text-color); 
+  font-size: 2rem; 
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--link-hover-color); 
+} */
+
+.social-media-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0rem 2rem 0rem 2rem;
+}
+
+.social-icon {
+  margin: 0 1rem; /* Adjust spacing */
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+.social-icon i {
+  font-size: var(--icon-size);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon i {
+  color: #000; /* Default color if needed */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Specific brand colors */
+.social-icon .fa-facebook-f {
+  color: #1877f2; /* Facebook blue */
+}
+
+.social-icon .fa-instagram {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    radial-gradient(
+      ellipse farthest-corner at 60% 50%,
+      #d9317a,
+      transparent 50%
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Makes the text transparent, showing the background */
+}
+
+.social-icon .fa-tiktok {
+  color: #000000; /* TikTok black */
+}

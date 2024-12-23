@@ -83,4 +83,13 @@
   --text-shadow: 1px 1px 2px var(--secondary-color);
   --fadein-duration: 0.5s;
   --fadeout-duration: 0.5s;
+
+  /* contact */
+  --contact-background-gradient-start: #211e46; /* Light blue */
+  --contact-background-gradient-end: #0d0a17; /* Dark blue */
+  --contact-background-semi-transparent: #e1e3e77e; /* Semi-transparent white */
+  --contact-text-color: #252627; /* Deep blue for text */
+  --contact-border-color: #ccc; /* Light gray for minimalist underline */
+  --contact-button-bg: #2a2d2e; /* Dark blue for button */
+  --contact-button-hover-bg: #6dd5ed; /* Light blue for button hover */
 }

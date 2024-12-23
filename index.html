@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/css/youtube.css" />
     <link rel="stylesheet" href="./assets/css/fontAwsome.css" />
     <link rel="stylesheet" href="./assets/css/music.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+
 
       <link
     rel="stylesheet"
@@ -192,6 +194,7 @@
       </section>
       <!-- 04 music -->
       <!-- Top Info -->
+       <div class="mainContainerMusic">
   <div class="musicContainer" id="audio">
   <!-- Top Info -->
   <div id="title">
@@ -303,9 +306,85 @@
     <div id="barEmpty" class="bar"></div>
     <div id="sliderBtn"></div>
   </div>
+  </div>
 </div>
-      
-
+  <!-- contact -->
+  <section class="flexContainer">
+    <section id="contactSection" class="contact-section">
+      <div class="formContainer">
+        <h2 class="headText">Contact Us</h2>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xyzylpbp"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button-contact">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="contact-info">
+      <h2>Phone</h2>
+      <p><a href="tel:+46704109527">+46704109527</a></p>
+      <h2>WhatsApp</h2>
+      <p>
+        <a href="https://api.whatsapp.com/send?phone=46704109527">+46704109527</a>
+      </p>
+      <h2>Email</h2>
+      <p>
+        <a href="mailto:vartanghazarian1915@hotmail.com"
+          >vartanghazarian1915@hotmail.com</a
+        >
+      </p>
+      <div class="social-media-links">
+        <a href="https://www.facebook.com/vartasouzi" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/vartanghazarian_1915/?hl=en"
+          class="social-icon"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/@vartanghazarian?lang=en"
+          class="social-icon"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </section>
+  </section>
  
   
   

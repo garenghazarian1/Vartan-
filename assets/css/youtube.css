@@ -7,6 +7,13 @@
   align-items: flex-start;
   height: 100%;
   width: 100vw;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/010.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .youtube-slider-section .glide {
