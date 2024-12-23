@@ -38,9 +38,23 @@
   --contact-text-color: #333;
   --contact-link-color: #007bff;
   --contact-link-hover-color: #0056b3;
-  --social-icon-color: #555;
-  --social-icon-hover-color: #007bff;
-  --social-icon-size: 2rem;
+  --social-bg-color: #f5f5f5c4; /* Background color for social section */
+  --social-icon-color: #555; /* Default color for icons */
+  --social-icon-hover-color: #007bff; /* Hover color for icons */
+  --social-icon-size: 2.5rem; /* Size of social icons */
+  --social-link-spacing: 1.5rem; /* Space between icons */
+  --social-icon-shadow: 0 4px 8px #00000033; /* Box shadow for hover effect */
+  --facebook-color: #1877f2; /* Facebook Blue */
+  --instagram-gradient: linear-gradient(
+    45deg,
+    #feda75,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  ); /* Instagram Gradient */
+  --tiktok-color: #000000; /* TikTok Red */
+  --icon-size: 2.5rem;
+  --icon-hover-scale: 1.2;
 
   /* Sidebar specific */
   --sidebar-width: 50vw;
