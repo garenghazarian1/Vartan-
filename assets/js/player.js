@@ -302,6 +302,21 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
   {
+    title: "Mi Togh",
+    file: "MiTogh", // Filename without extension
+    howl: null,
+  },
+  {
+    title: "Oures Yar",
+    file: "uresYar", // Filename without extension
+    howl: null,
+  },
+  {
+    title: "Ur Eyir Astvats",
+    file: "UrEyirAstvats", // Filename without extension
+    howl: null,
+  },
+  {
     title: "Bnt El Jzrawiye",
     file: "BntElJzrawiye", // Filename without extension
     howl: null,
@@ -309,11 +324,6 @@ var player = new Player([
   {
     title: "Em El Wafa",
     file: "EmElWafa", // Filename without extension
-    howl: null,
-  },
-  {
-    title: "Mi Togh",
-    file: "MiTogh", // Filename without extension
     howl: null,
   },
 ]);
