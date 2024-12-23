@@ -50,6 +50,52 @@
   animation: slideUp 1s ease-in-out;
 }
 
+.social-links-carousel {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  z-index: 3000;
+  background-color: rgba(250, 235, 215, 0.247);
+  border-radius: 1rem;
+}
+.social-link-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: transform 0.3s ease;
+  margin: 2rem 2rem 2rem 2rem;
+}
+.social-link-carousel:hover {
+  transform: scale(var(--icon-hover-scale));
+}
+
+/* Facebook Icon */
+.social-link-carousel:nth-child(1) i {
+  color: var(--facebook-color);
+}
+
+/* Instagram Icon with Gradient */
+.social-link-carousel:nth-child(2) i {
+  background: var(--instagram-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TikTok Icon */
+.social-link-carousel:nth-child(3) i {
+  color: var(--tiktok-color);
+}
+
+.social-link-carousel i {
+  font-size: var(--icon-size);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .carousel-title {
     font-size: 3.5rem;
