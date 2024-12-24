@@ -23,6 +23,15 @@ export function setupSidebarLinks() {
   });
 }
 
+// Utility function to debounce events
+function debounce(func, wait = 100) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", toggleSidebar);
@@ -34,5 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.addEventListener("scroll", closeSidebar);
+  // Debounced scroll listener
+  document.addEventListener(
+    "scroll",
+    debounce(() => {
+      const sidebar = document.querySelector(".sidebar");
+      if (sidebar.classList.contains("open")) {
+        closeSidebar();
+      }
+    })
+  );
 });
