@@ -3,8 +3,9 @@
   padding: 2rem 0rem 2rem 0rem;
   background-color: var(--youtube-slider-bg);
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
   width: 100vw;
   background: linear-gradient(
@@ -72,20 +73,20 @@
   .youtube-slider-section .glide {
     width: 95%;
   }
-}
 
-@media (max-width: 480px) {
-  .youtube-slider-section iframe {
-    height: 12rem;
-  }
-  .youtube-slider-section .glide {
-    width: 100%;
-  }
-  .youtube-slider-section .glide__arrows {
-    margin-top: 0.5rem;
-  }
-  .youtube-slider-section .glide__arrow {
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
+  @media (max-width: 480px) {
+    .youtube-slider-section iframe {
+      height: 12rem;
+    }
+    .youtube-slider-section .glide {
+      width: 100%;
+    }
+    .youtube-slider-section .glide__arrows {
+      margin-top: 0.5rem;
+    }
+    .youtube-slider-section .glide__arrow {
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+    }
   }
 }
