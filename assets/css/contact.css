@@ -106,26 +106,6 @@
   }
 }
 
-/* socialMedia */
-
-/* .social-media-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.social-icon {
-  margin: 0 10px;
-  color: var(--text-color); 
-  font-size: 2rem; 
-  transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-  color: var(--link-hover-color); 
-} */
-
 .social-media-links {
   display: flex;
   justify-content: space-between;

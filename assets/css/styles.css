@@ -22,7 +22,7 @@ main {
 
 html,
 body {
-  scroll-behavior: smooth; /* Smooth scrolling for a polished effect */
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -33,7 +33,7 @@ body {
 
 .section {
   scroll-snap-align: start;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
