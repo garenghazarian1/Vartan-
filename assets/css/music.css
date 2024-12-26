@@ -324,33 +324,42 @@
 #playlist {
   width: 100%;
   height: 100vh;
-  background-color: #000000cc; /* Darker overlay for better focus */
+  background-color: #000000cc;
   display: none;
-  overflow-y: auto; /* Allow scrolling if the list is too long */
-  z-index: 10; /* Ensure it stays above other elements */
+  overflow-y: auto;
+  z-index: 10;
+  position: relative; /* Needed for child absolute positioning */
 }
 
 #list {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #000000cc;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the list */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem; /* Add padding for spacing */
-  gap: 0.4rem; /* Space between song items */
+  padding: 1rem;
+  gap: 0.4rem;
 }
 
 .list-song {
-  width: 90%; /* Make the songs fit nicely inside the container */
-  max-width: 600px; /* Limit the width on larger screens */
-  height: 4rem; /* Smaller height for modern design */
+  width: 90%;
+  max-width: 600px;
+  height: 4rem;
   font-size: 1.5rem;
-  line-height: 4rem; /* Center text vertically */
+  line-height: 4rem;
   text-align: center;
   font-weight: lighter;
   color: var(--primary-color);
-  background: rgba(255, 255, 255, 0.1); /* Subtle background for songs */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
