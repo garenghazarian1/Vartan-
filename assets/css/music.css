@@ -275,10 +275,10 @@
 }
 #progress {
   position: absolute;
-  top: 50;
+  bottom: 20%;
   left: 0;
   width: 0%;
-  height: 22%;
+  height: 5%;
   background-color: rgba(50, 5, 134, 0.635);
   border-radius: 1rem;
   z-index: 2;
