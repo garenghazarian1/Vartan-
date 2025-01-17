@@ -2,3 +2,8 @@
   font-family: "Megrim";
   src: url("../fonts/Megrim-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Flamenco";
+  src: url("../fonts/Flamenco-Regular.ttf") format("truetype");
+}

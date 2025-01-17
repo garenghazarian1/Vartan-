@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/colors.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/overlay.css" />
+    <link rel="stylesheet" href="./assets/css/events.css" />
     <link rel="stylesheet" href="./assets/css/glidCarousel.css" />
     <link rel="stylesheet" href="./assets/css/carousel.css" />
     <link rel="stylesheet" href="./assets/css/navbar.css" />
@@ -16,6 +18,7 @@
     <link rel="stylesheet" href="./assets/css/music.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+
 
 
       <link
@@ -32,12 +35,25 @@
   <body>
     <main>
         
+<!-- 00 Overlay for Event Poster -->
+<div id="eventLandingOverlay" class="event-overlay">
+  <button class="close-overlay">X</button>
+  <div class="event-content">
+     <div class="event-background">
+      <img src="./assets/images/events/valentine2024.gif" alt="Valentine Party Background">
+    </div> 
+  </div>
+</div>
+
+
+
 
       <!-- 01 Nav Bar -->
       <nav class="sidebar">
         <div class="hamburger" aria-label="Open sidebar">☰</div>
         <div>
         <a href="#" class="sidebarA">Home</a>
+        <a href="pages/events.html" class="sidebarA">Events</a>
         <a href="#videoSection" class="sidebarA">YouTube</a>
         <a href="#audio" class="sidebarA">Music</a>
         <a href="#contactSection" class="sidebarA">Contact</a>
@@ -82,6 +98,8 @@
           
       </nav>
 
+        
+          
 
       <!---- 02 carousel ---->
       <div class="glide carouselContainer">
@@ -410,6 +428,8 @@
 
 
 
+<!-- Overlay for Event Poster -->
+<script src="./assets/js/overlay.js"></script>
 
 
     <!-- navbar -->

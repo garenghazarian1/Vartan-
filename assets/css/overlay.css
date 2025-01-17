@@ -1,0 +1,73 @@
+.event-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.event-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 80%; /* Adjust height as necessary */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-background img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  display: block;
+  transform-origin: center;
+}
+
+@media (max-width: 768px) {
+  .event-content {
+    width: 95%;
+  }
+
+  .close-overlay {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+
+  .event-background img {
+    object-position: center; /* Ensures the central part of the image is focused on smaller screens */
+  }
+}
