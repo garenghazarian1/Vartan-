@@ -57,8 +57,8 @@
   --icon-hover-scale: 1.2;
 
   /* Sidebar specific */
-  --sidebar-width: 50vw;
-  --sidebar-mobile-width: 50vw;
+  --sidebar-width: 80vw;
+  --sidebar-mobile-width: 80vw;
   --sidebar-background-color: rgba(0, 0, 0, 0.379);
   --sidebar-backdrop-filter: blur(10px);
   --sidebar-text-color: #ecf0f1;

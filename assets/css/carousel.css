@@ -24,7 +24,7 @@
   transform: translate(-50%, -50%);
   font-family: "Megrim";
   text-align: center;
-  z-index: 2000;
+  z-index: 40;
   color: var(--carousel-title-color);
   text-shadow: 2px 4px 6px var(--carousel-title-shadow);
   padding: 1rem 2rem;
@@ -56,7 +56,7 @@
   position: absolute;
   top: 30%;
   right: 0;
-  z-index: 3000;
+  z-index: 50;
   /* background-color: rgba(250, 235, 215, 0.247); */
   border-radius: 1rem;
 }
