@@ -1,6 +1,6 @@
 .sidebar {
   width: var(--sidebar-width);
-  height: 80vh;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: calc(-1 * var(--sidebar-width));
@@ -10,7 +10,7 @@
   box-shadow: var(--sidebar-box-shadow);
   overflow-y: auto; /* For scrolling content if needed */
   border-right: 1px solid var(--sidebar-border-color);
-  z-index: 3000;
+  z-index: 4000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +43,6 @@
   background-color: var(--sidebar-link-bg);
   text-decoration: none;
   font-size: 1rem;
-  border-radius: 4px;
   margin: 0.5rem 0;
   transition: color var(--navbar-transition-speed);
   background-color: var(--navbar-transition-speed);

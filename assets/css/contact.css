@@ -24,7 +24,6 @@
   flex-grow: 1;
   background: var(--contact-background-semi-transparent);
   padding: 1.25rem;
-  border-radius: 0.625rem;
   color: var(--contact-text-color);
   display: flex;
   flex-direction: column;
