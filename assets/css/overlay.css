@@ -48,7 +48,7 @@
   align-items: center;
 }
 
-.event-background img {
+.overlay-img {
   /* width: 100%; */
   height: 100%;
   object-fit: cover; /* Ensures the image covers the entire container */
@@ -67,7 +67,7 @@
     font-size: 1.5rem;
   }
 
-  .event-background img {
+  .overlay-img {
     object-position: center; /* Ensures the central part of the image is focused on smaller screens */
   }
 }
