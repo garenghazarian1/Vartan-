@@ -1,6 +1,6 @@
 .youtube-slider-section {
-  margin: 0rem 1rem 0rem 1rem;
-  padding: 2rem 0rem 2rem 0rem;
+  margin: 0rem 1rem;
+  padding: 2rem 0rem;
   background-color: var(--youtube-slider-bg);
   display: flex;
   flex-direction: row;
@@ -15,20 +15,29 @@
     url("../images/010.jpg");
   background-size: cover;
   background-position: center;
+  overflow: visible; /* Ensures swipe doesn't get clipped */
+  position: relative; /* Ensures proper stacking context */
 }
 
 .youtube-slider-section .glide {
   width: 90%;
-  /* max-width: 60rem; */
+  position: relative; /* Ensures that this doesn't affect child element positions */
+}
+
+.youtube-slider-section .glide__track {
+  width: 100%; /* Full width to allow correct swipe mechanics */
+  position: relative;
 }
 
 .youtube-slider-section .glide__slides {
   display: flex;
+  position: relative; /* Ensures proper alignment of slides */
 }
 
 .youtube-slider-section .glide__slide {
   flex: 1 0 auto;
   text-align: center;
+  pointer-events: none; /* Disables pointer events on slide but not on iframe */
 }
 
 .youtube-slider-section iframe {
@@ -36,12 +45,7 @@
   height: 25rem;
   border-radius: var(--youtube-border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.youtube-slider-section iframe:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  pointer-events: auto; /* Enables pointer events on iframe for interactions */
 }
 
 .youtube-slider-section .glide__arrows {
@@ -58,14 +62,13 @@
   border-radius: var(--youtube-border-radius);
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .youtube-slider-section .glide__arrow:hover {
   background-color: var(--youtube-arrow-hover-bg);
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .youtube-slider-section iframe {
     height: 15rem;
@@ -73,20 +76,20 @@
   .youtube-slider-section .glide {
     width: 95%;
   }
+}
 
-  @media (max-width: 480px) {
-    .youtube-slider-section iframe {
-      height: 12rem;
-    }
-    .youtube-slider-section .glide {
-      width: 100%;
-    }
-    .youtube-slider-section .glide__arrows {
-      margin-top: 0.5rem;
-    }
-    .youtube-slider-section .glide__arrow {
-      font-size: 1rem;
-      padding: 0.25rem 0.5rem;
-    }
+@media (max-width: 480px) {
+  .youtube-slider-section iframe {
+    height: 12rem;
+  }
+  .youtube-slider-section .glide {
+    width: 100%;
+  }
+  .youtube-slider-section .glide__arrows {
+    margin-top: 0.5rem;
+  }
+  .youtube-slider-section .glide__arrow {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
   }
 }
