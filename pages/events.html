@@ -61,7 +61,7 @@
         </div>
         <!--002  Event -->
 
-        <div class="event">
+        <!-- <div class="event">
           <div class="event-image-container">
             <img
               src="../assets/images/events/valentineA2024.jpg"
@@ -85,7 +85,7 @@
               Contact: <a href="tel:+46720010676">+46720010676 (Gabriell)</a>
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!--003  Event -->
 
@@ -117,5 +117,34 @@
         <!-- Additional events can be added here -->
       </section>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const eventImages = document.querySelectorAll(".event-image"); // Select all images
+
+        eventImages.forEach((image) => {
+          image.addEventListener("click", function () {
+            // Check if overlay already exists
+            let overlay = document.querySelector(".fullscreen-overlay");
+
+            if (!overlay) {
+              overlay = document.createElement("div");
+              overlay.classList.add("fullscreen-overlay");
+
+              const fullImage = document.createElement("img");
+              fullImage.src = this.src; // Use 'this' to get the clicked image
+              fullImage.alt = this.alt;
+
+              overlay.appendChild(fullImage);
+              document.body.appendChild(overlay);
+
+              // Click event to remove full-screen image
+              overlay.addEventListener("click", function () {
+                document.body.removeChild(overlay);
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
