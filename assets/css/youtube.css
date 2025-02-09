@@ -1,95 +1,147 @@
-.youtube-slider-section {
-  margin: 0rem 1rem;
-  padding: 2rem 0rem;
-  background-color: var(--youtube-slider-bg);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: auto;
+:root {
+  --neon-blue: #00f3ff;
+  --cyber-purple: #7024e6;
+  --hud-green: #9fff20;
+  --dark-bg: #0a0a12;
+}
+
+.youtube-section {
   width: 100vw;
+  height: 100vh;
+  padding: 4rem 0;
+  background: linear-gradient(45deg, var(--dark-bg) 0%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("../images/010.jpg");
-  background-size: cover;
-  background-position: center;
-  overflow: visible; /* Ensures swipe doesn't get clipped */
-  position: relative; /* Ensures proper stacking context */
+    45deg,
+    transparent 48%,
+    rgba(112, 36, 230, 0.1) 50%,
+    transparent 52%
+  );
+  animation: gridAnim 20s linear infinite;
+  z-index: 0;
 }
 
-.youtube-slider-section .glide {
-  width: 90%;
-  position: relative; /* Ensures that this doesn't affect child element positions */
+@keyframes gridAnim {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50%, 50%);
+  }
 }
 
-.youtube-slider-section .glide__track {
-  width: 100%; /* Full width to allow correct swipe mechanics */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   position: relative;
 }
 
-.youtube-slider-section .glide__slides {
-  display: flex;
-  position: relative; /* Ensures proper alignment of slides */
+.video-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.youtube-slider-section .glide__slide {
-  flex: 1 0 auto;
-  text-align: center;
-  pointer-events: none; /* Disables pointer events on slide but not on iframe */
+.video-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 243, 255, 0.2);
+  border-color: var(--neon-blue);
 }
 
-.youtube-slider-section iframe {
+.video-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--x) var(--y),
+    rgba(113, 36, 230, 0.4),
+    transparent 40%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover::before {
+  opacity: 1;
+}
+
+.video-card iframe {
   width: 100%;
-  height: 25rem;
-  border-radius: var(--youtube-border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  pointer-events: auto; /* Enables pointer events on iframe for interactions */
-}
-
-.youtube-slider-section .glide__arrows {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.youtube-slider-section .glide__arrow {
-  background-color: var(--youtube-slider-color);
-  color: var(--youtube-slider-bg);
+  height: 100%;
+  min-height: 200px;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: var(--youtube-border-radius);
-  font-size: 1.2rem;
-  cursor: pointer;
+  border-radius: 16px;
+  aspect-ratio: 16/9;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.youtube-slider-section .glide__arrow:hover {
-  background-color: var(--youtube-arrow-hover-bg);
+/* Dynamic cursor effect */
+.video-grid:hover .video-card:not(:hover) {
+  opacity: 0.8;
+  filter: blur(2px);
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .youtube-slider-section iframe {
-    height: 15rem;
+  .video-grid {
+    grid-template-columns: 1fr;
   }
-  .youtube-slider-section .glide {
-    width: 95%;
+
+  .video-card {
+    margin: 0 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .youtube-slider-section iframe {
-    height: 12rem;
-  }
-  .youtube-slider-section .glide {
-    width: 100%;
-  }
-  .youtube-slider-section .glide__arrows {
-    margin-top: 0.5rem;
-  }
-  .youtube-slider-section .glide__arrow {
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-  }
+/* Section Title (add this HTML element) */
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
 }
