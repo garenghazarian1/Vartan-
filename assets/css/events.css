@@ -5,6 +5,7 @@
   padding: 1rem;
   background-color: #1a1a1a;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -19,7 +20,6 @@
   border-radius: 8px;
   padding: 0.5rem;
   width: 450px;
-  min-width: 350px;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -71,4 +71,24 @@
 
 .maps-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .events {
+    flex-direction: column-reverse;
+  }
+  .event {
+    width: 300px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .events {
+    flex-direction: column-reverse;
+  }
+  .event {
+    width: 300px;
+    height: fit-content;
+  }
 }
