@@ -27,7 +27,7 @@
   top: 2rem;
   left: 2rem;
   color: var(--navbar-text-color);
-  z-index: 1000;
+  z-index: 80;
   transition: opacity var(--navbar-transition-speed);
 }
 
