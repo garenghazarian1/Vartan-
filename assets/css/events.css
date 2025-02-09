@@ -112,4 +112,5 @@
   max-width: 90%;
   max-height: 90%;
   cursor: pointer;
+  object-fit: contain;
 }

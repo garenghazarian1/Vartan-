@@ -123,25 +123,27 @@
 
         eventImages.forEach((image) => {
           image.addEventListener("click", function () {
-            // Check if overlay already exists
-            let overlay = document.querySelector(".fullscreen-overlay");
-
-            if (!overlay) {
-              overlay = document.createElement("div");
-              overlay.classList.add("fullscreen-overlay");
-
-              const fullImage = document.createElement("img");
-              fullImage.src = this.src; // Use 'this' to get the clicked image
-              fullImage.alt = this.alt;
-
-              overlay.appendChild(fullImage);
-              document.body.appendChild(overlay);
-
-              // Click event to remove full-screen image
-              overlay.addEventListener("click", function () {
-                document.body.removeChild(overlay);
-              });
+            // Remove existing overlay if any
+            let existingOverlay = document.querySelector(".fullscreen-overlay");
+            if (existingOverlay) {
+              existingOverlay.remove();
             }
+
+            // Create new overlay
+            let overlay = document.createElement("div");
+            overlay.classList.add("fullscreen-overlay");
+
+            let fullImage = document.createElement("img");
+            fullImage.src = this.src; // Get clicked image source
+            fullImage.alt = this.alt;
+
+            overlay.appendChild(fullImage);
+            document.body.appendChild(overlay);
+
+            // Click to close the overlay
+            overlay.addEventListener("click", function () {
+              overlay.remove();
+            });
           });
         });
       });
