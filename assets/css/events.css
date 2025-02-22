@@ -5,8 +5,8 @@
   padding: 1rem;
   background-color: #1a1a1a;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
